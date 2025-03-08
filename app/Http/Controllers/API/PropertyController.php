@@ -3,22 +3,19 @@
 namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\API\BaseController as BaseController;
-use App\Http\Resources\ProductResource;
 use App\Http\Resources\PropertyResource;
 use App\Models\Property;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\JsonResponse;
-use Symfony\Component\Mime\Part\Multipart\MixedPart;
 
 class PropertyController extends BaseController
 {
     /**
     * Display a listing of the resource.
-    * https://medium.com/@vidvatek/laravel-10-rest-api-authentication-using-sanctum-d94a861a5ef9
     *
     * @return \Illuminate\Http\Response
     */
-    public function index(): Mixed
+    public function index(): mixed
     {
         $properties = Property::all();
         return $this->sendResponse(PropertyResource::collection($properties), 'Products retrieved successfully.');
