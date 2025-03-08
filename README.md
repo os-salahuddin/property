@@ -1,4 +1,4 @@
-## Run property application
+## To run property application, Please follow the steps:
 
 Clone the repository from: https://github.com/os-salahuddin/property.git
 
